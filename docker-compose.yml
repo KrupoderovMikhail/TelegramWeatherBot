@@ -1,0 +1,10 @@
+version: '3.5'
+services:
+  template-service:
+    image: telegram-weather-bot:latest
+    user: root
+    build:
+      context: ""
+      dockerfile: Dockerfile
+    ports:
+      - "8092:8092"
