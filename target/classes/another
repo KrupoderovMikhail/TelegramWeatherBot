@@ -9,7 +9,7 @@
         sendMsg(update.getMessage().getChatId().toString(), message);
         String txt = msg.getText();
         if (txt.equals("/start")) {
-            sendMsg(message, "Hello, world! This is simple bot!");
+            sendMsg(message, "Hello, world! This is simple com.KrupoderovMikhail.github.bot!");
         }
     }
 

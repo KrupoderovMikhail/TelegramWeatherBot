@@ -1,4 +1,4 @@
-package model;
+package com.KrupoderovMikhail.github.model;
 
 public class Model {
 

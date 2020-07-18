@@ -1,6 +1,6 @@
-package service;
+package com.KrupoderovMikhail.github.service;
 
-import model.Model;
+import com.KrupoderovMikhail.github.model.Model;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -40,7 +40,7 @@ public class Weather {
         return "City: " + model.getName() + "\n" +
                 "Temperature: " + model.getTemp() + "°C" + "\n" +
                 "Humidity: " + model.getHumidity() + "%" + "\n" +
-                "Main: " + model.getMain() + "\n" +
+                "com.KrupoderovMikhail.github.Main: " + model.getMain() + "\n" +
                 "http://openweathermap.org/img/w/" + model.getIcon() + ".png";
     }
 }

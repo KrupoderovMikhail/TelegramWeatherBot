@@ -1,6 +1,6 @@
-package bot;
+package com.KrupoderovMikhail.github.bot;
 
-import model.Model;
+import com.KrupoderovMikhail.github.model.Model;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
@@ -9,7 +9,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMar
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardButton;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardRow;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import service.Weather;
+import com.KrupoderovMikhail.github.service.Weather;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ import java.util.List;
 
 public class Bot extends TelegramLongPollingBot {
 
-    private static final String USERNAME = "your_username";
+    private static final String USERNAME = "your_name";
     private static final String TOKEN = "your_token";
 
     /**
