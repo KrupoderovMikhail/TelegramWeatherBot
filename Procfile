@@ -1,0 +1,1 @@
+worker: sh target/telegrambot-1.0.jar

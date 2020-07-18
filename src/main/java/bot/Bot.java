@@ -1,3 +1,6 @@
+package bot;
+
+import model.Model;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
@@ -6,6 +9,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMar
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardButton;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardRow;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
+import service.Weather;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,8 +17,8 @@ import java.util.List;
 
 public class Bot extends TelegramLongPollingBot {
 
-    private static final String USERNAME = "FriendlyAssistantTestBot";
-    private static final String TOKEN = "849232261:AAEoCCa4qNFalkDqpMG-Znio-tTe_Adk2_E";
+    private static final String USERNAME = "your_username";
+    private static final String TOKEN = "your_token";
 
     /**
      * Метод для настройки сообщения и его отправки.

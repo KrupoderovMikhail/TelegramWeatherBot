@@ -1,0 +1,52 @@
+/**
+     * Метод для приема сообщений.
+     * @param update Содержит сообщение от пользователя.
+     */
+    @Override
+    public void onUpdateReceived(Update update) {
+        Message msg = new Message();
+        String message = update.getMessage().getText();
+        sendMsg(update.getMessage().getChatId().toString(), message);
+        String txt = msg.getText();
+        if (txt.equals("/start")) {
+            sendMsg(message, "Hello, world! This is simple bot!");
+        }
+    }
+
+    /**
+     * Метод для настройки сообщения и его отправки.
+     * @param chatId id чата
+     * @param s Строка, которую необходимот отправить в качестве сообщения.
+     */
+    public synchronized void sendMsg(String chatId, String s) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.enableMarkdown(true);
+        sendMessage.setChatId(chatId);
+        sendMessage.setText(s);
+        try {
+            execute(sendMessage);
+        } catch (TelegramApiException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Метод возвращает имя бота, указанное при регистрации
+     *
+     * @return FriendlyAssistantTestBot
+     */
+    public String getBotUsername() {
+        return "FriendlyAssistantTestBot";
+    }
+
+    /**
+     * Метод возвращает токен бота для связи с сервером Telegram
+     *
+     * @return 491073496:AAEOZBql7FaGHnFKwALZN-I0VntFPxAcuo4
+     */
+    public String getBotToken() {
+        return "491073496:AAEOZBql7FaGHnFKwALZN-I0VntFPxAcuo4";
+    }
+
+
+}
